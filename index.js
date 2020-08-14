@@ -45,13 +45,18 @@ app.get('/cadastro/:id', (req, res) => {
 });
 
 app.get('/gato/', (req, res) => {
-  console.log("get /gato/:id");
+  console.log("get /mia/");
   res.send({ gato: `Miauuuuu` })
 });
 
-app.get('/gato/:id', (req, res) => {
-  console.log("get /gato/:id");
-  res.sendFile(__dirname + '/src/img/100.jpeg')
+function randomIntFromInterval(min, max) { // min and max included 
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+app.get('/gato/', (req, res) => {
+  console.log("get /gato/");
+  const randomid = randomIntFromInterval(1, 11)
+  res.sendFile(__dirname + '/src/img/'+randomid+'.jpg')
 });
 
 
