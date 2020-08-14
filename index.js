@@ -15,7 +15,11 @@ app.use(cors());
 
 app.get('/', (req, res) => {
   console.log("get /");
-  res.send({ works: `Eu estou funcionando!!` })
+  res.send({ works: `Eu estou funcionando!!`, 
+  cadastrar: `POST http://localhost:${port}/cadastro `,
+  lista_cadastro: `GET http://localhost:${port}/cadastro/:id`,
+  gato_mia: `GET http://localhost:${port}/gato`,
+  gato_foto: `GET http://localhost:${port}/gato/:id`})
 
   console.log("\n");
 });
