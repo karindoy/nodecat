@@ -44,7 +44,7 @@ app.get('/cadastro/:id', (req, res) => {
   console.log("\n");
 });
 
-app.get('/gato/', (req, res) => {
+app.get('/mia/', (req, res) => {
   console.log("get /mia/");
   res.send({ gato: `Miauuuuu` })
 });
