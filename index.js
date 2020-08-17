@@ -55,7 +55,7 @@ function randomIntFromInterval(min, max) { // min and max included
 
 app.get('/gato/', (req, res) => {
   console.log("get /gato/");
-  const randomid = randomIntFromInterval(1, 11)
+  const randomid = randomIntFromInterval(1, 15)
   res.sendFile(__dirname + '/src/img/'+randomid+'.jpg')
 });
 
