@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+  cat:
+    hostname: hostcat
+    container_name: cat
+    image: nodecat:1.0
+    ports:
+      - "3636:8080"
+    tty: true
+    restart: unless-stopped
